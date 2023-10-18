@@ -19,6 +19,17 @@ return new class extends Migration
             $table->enum('status', ['I', 'T']);
             $table->timestamps();
         });
+
+         // Insert a new series
+        DB::table('series')->insert([
+            'id_buku' => '1',
+            'chapter' => 'BAB 1',
+            'isi' => 'pada jaman dahulu',
+            'status' => 'I',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
     }
 
     /**

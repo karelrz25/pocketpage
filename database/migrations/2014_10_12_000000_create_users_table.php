@@ -20,6 +20,19 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+         // Hash the password before storing it
+        $hashedPassword = Hash::make('user123');
+
+         // Insert a new user
+        DB::table('users')->insert([
+            'nama' => 'user',
+            'password' => $hashedPassword,
+            'alamat' => 'parung dengdek',
+            'noTelp' => '0821',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**

@@ -17,6 +17,17 @@ return new class extends Migration
             $table->string('password');
             $table->timestamps();
         });
+
+         // Hash the password before storing it
+        $hashedPassword = Hash::make('admin123');
+
+         // Insert a new admin
+        DB::table('admins')->insert([
+            'username' => 'admin',
+            'password' => $hashedPassword,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**

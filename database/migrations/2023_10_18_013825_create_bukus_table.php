@@ -27,6 +27,25 @@ return new class extends Migration
             $table->enum('rekomendasi', ['I', 'T']);
             $table->timestamps();
         });
+
+
+         // Insert a new dokter
+        DB::table('bukus')->insert([
+            'judul' => 'buku horor',
+            'id_penulis' => '1',
+            'penerbit' => '',
+            'tahun_terbit' => '',
+            'tebal' => '',
+            'isbn' => '',
+            'cover' => 'cover.jpg',
+            'pdf' => '',
+            'status' => 'I',
+            'id_kategori' => '1',
+            'sinopsis' => 'buku ini menceritaan',
+            'rekomendasi' => 'I',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**
