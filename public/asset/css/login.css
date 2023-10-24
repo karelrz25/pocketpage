@@ -1,0 +1,53 @@
+html,
+ body{
+    background-color: aqua;
+    height : 100%;
+    background-image : url("https://i.pinimg.com/564x/28/2c/ce/282ccebed6fc1d167e2e63bcb9cfd94c.jpg");
+}
+
+.global-container{
+    height: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+}
+
+.login-form{
+    width: 380px;
+    height: 390px;
+    padding: 20px;
+    background-color: antiquewhite !important;
+    border-radius: 10px !important;
+}
+
+input[type="username"],
+input[type="password"]{
+    background-color: white !important;
+    color: black;
+    border:2px solid black;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="username"]:focus,
+input[type="password"]:focus {
+    outline: black;
+    border: black;
+    background: black;
+    color: black;
+    margin: 0;
+}
+
+.card-title{
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.btn{
+    background: blue !important;
+    color: white !important;
+    transform: translateY(10px);
+    font-size: 14px;
+    border-radius: 10px !important;
+}

@@ -49,13 +49,16 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tulis</a>
+                            <a class="btn btn-primary mx-1" href="#">Tulis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('formlogin_user') }}">Masuk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('user.register') }}">Daftar</a>
                         </li>
                     </ul>
                 </div>
-                <a class="nav-link ms-2" href="#"  role="button" aria-expanded="false">
-                    <img src="asset/pp.png" alt="pp" width="40">
-                </a>
             </div>
         </nav>
         
