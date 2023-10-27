@@ -1,50 +1,45 @@
 html,
  body{
     height : 100%;
-    background-color: antiquewhite;
-    align-items: center;
-    justify-content: center;
-    
+    background-image : url("https://img.freepik.com/premium-vector/mountain-landscape-with-pine-forest-starry-night-sky_105940-417.jpg?w=740");
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .global-container{
+    height: 100;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #0a0a0a;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-input[type="username"],
-input[type="password"],
-input[type="alamat"],
-input[type="notelepon"]{
-    background-color: white !important;
-    color: black;
-    border:2px solid black;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.py-2{
+    font-family: 'Times New Roman', Times, serif;
 }
 
-input[type="username"]:focus,
-input[type="password"]:focus,
-input[type="alamat"]:focus,
-input[type="notelepon"]:focus{
-    outline: black;
-    border: black;
-    background: black;
-    color: black;
-    margin: 0;
-}
-
-.form-control{
-    font-size: 0.8rem;
-    padding: 0.3rem 6rem;
-}
-
-.btn{
-    background: blue !important;
-    color: white !important;
-    transform: translateY(10px);
-    font-size: 14px;
-    border-radius: 10px !important;
+.card{
+    background-color: #D2E0FB !important;
+    border-radius: 10px;
+    
 }
