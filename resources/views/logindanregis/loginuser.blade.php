@@ -14,29 +14,33 @@
   </head>
   <body>
     
-   <div class="global-container mt-5">
-    <div class="card login-form">
-        <div class="card-body">
-            <h1 class="card-title text-center">L O G I N</h1>
-            </div>
-            <div class-="card-text">
-            <form action="{{ route('user.login') }}" method="post">
-                @csrf
-            <div class="mb-3">
-                <label for="exampleInputUsername1" class="form-label">Nama</label>
-                <input type="username" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp" name="nama">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-
-<a href="regis">regis</a>
+        <div class="global-container">
+            <div class="card login-form mt-5">
+                <div class="card-body">
+                    <h2 class="card-title text-center">L O G I N</h2>
+                </div>
+                <div class-="card-text">
+                    <form action="{{ route('user.login') }}" method="post">
+                            @csrf
+                        <div class="mb-3">
+                            <label for="exampleInputUsername1" class="form-label">Nama</label>
+                            <input type="username" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp" name="nama" placeholder="Masukkan Nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Masukkan Password">
+                        </div>
+                        <div class="d-grid gap-2 col-3 mx-auto">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form> 
+                    <div class="mt-3 text-center">
+                        <p>
+                        Belum punya akun? Silahkan <a href="register">Daftar</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-   </div>
-    
-  </body>
+    </body>
 </html>

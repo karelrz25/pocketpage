@@ -1,8 +1,16 @@
 html,
  body{
-    background-color: aqua;
     height : 100%;
-    background-image : url("https://i.pinimg.com/564x/28/2c/ce/282ccebed6fc1d167e2e63bcb9cfd94c.jpg");
+    background-image : url("https://img.freepik.com/premium-vector/mountain-landscape-with-pine-forest-starry-night-sky_105940-417.jpg?w=740");
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .global-container{
@@ -17,8 +25,9 @@ html,
     width: 380px;
     height: 390px;
     padding: 20px;
-    background-color: antiquewhite !important;
+    background-color: #D2E0FB !important;
     border-radius: 10px !important;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 input[type="username"],
@@ -27,11 +36,11 @@ input[type="password"]{
     color: black;
     border:2px solid black;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-input[type="username"]:focus,
-input[type="password"]:focus {
+input[type="username"],
+input[type="password"] {
     outline: black;
     border: black;
     background: black;
@@ -42,6 +51,7 @@ input[type="password"]:focus {
 .card-title{
     font-weight: 500;
     padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .btn{
@@ -50,4 +60,5 @@ input[type="password"]:focus {
     transform: translateY(10px);
     font-size: 14px;
     border-radius: 10px !important;
+    margin-top: 0px;
 }
