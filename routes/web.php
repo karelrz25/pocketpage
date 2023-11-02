@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,18 @@ Route::get('/', function () {
 });
 
 Route::prefix('user')->group(function(){
-    Route::get('/login',[UserController::class, 'Index'])->name('formlogin_user');
+    Route::get('/login',[UserController::class, 'Index'])->name('formlogin_user')->middleware('guest');
     Route::post('/login/proses',[UserController::class, 'Login'])->name('user.login');
     Route::get('/dashboard',[UserController::class, 'Dashboard'])->name('user.dashboard')->middleware('auth');
     Route::get('/logout',[UserController::class, 'Logout'])->name('user.logout')->middleware('auth');
     Route::get('/register',[UserController::class, 'Register'])->name('user.register')->middleware('guest');
     Route::post('/register/proses',[UserController::class, 'RegisterCreate'])->name('user.register.create');
+});
+
+
+Route::prefix('admin')->group(function(){
+    Route::get('/login', [AdminController::class, 'Login'])->name('formlogin_admin')->middleware('guest');
+    Route::post('/login/proses', [AdminController::class, 'LoginProses'])->name('admin.login');
+    Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
+    Route::get('/logout', [AdminController::class, 'Logout'])->name('admin.logout')->middleware('admin');
 });
