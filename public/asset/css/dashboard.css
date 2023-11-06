@@ -1,0 +1,19 @@
+.text{
+    font-family: cursive;
+    font-size: 45px;
+}
+
+.carousel{
+    border-radius: 50px;
+}
+
+.card-title{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.textjudul{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
