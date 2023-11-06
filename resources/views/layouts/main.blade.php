@@ -19,14 +19,9 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-
-    
-
-        
-    </head>
-    <body>
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid mx-6">
                 <a class="navbar-brand" href="#">
                     <img src="asset/logo.png" alt="Bootstrap" width="180">
@@ -34,16 +29,39 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('formlogin_user') }}">Masuk</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jelajahi</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">p</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.register') }}">Daftar</a>
+                            <a class="btn btn-primary mx-1" href="#">Tulis</a>
                         </li>
+                        <!-- Example split danger button -->
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-danger">Action</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                        </div>
                     </ul>
                 </div>
             </div>
         </nav>
-        
-
-    </body>
+        <div>
+            @yield('container')
+        </div>
+</body>
 </html>
