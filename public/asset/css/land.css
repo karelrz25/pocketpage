@@ -1,0 +1,63 @@
+body {
+    padding-top: 100px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+
+section{
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.kolom{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.kolom .deskripsi {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #364f6b;
+}
+
+h2 {
+    font-family: '';
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+}
+
+p {
+    font-family: 'comic sans-ms';
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.card {
+    border: 2px solid #364f6b;
+    border-radius: 10px;
+}
+
+.card .card-title {
+    font-family: 'comic sans ms';
+    color: #364f6b;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card .card-text {
+    font-family: 'comic sans ms';
+    font-size: 20px;
+    text-align: center;
+}
