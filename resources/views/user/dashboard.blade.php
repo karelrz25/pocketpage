@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-        <link href="{{asset('asset/css/dashboard.css')}}" rel="stylesheet">
+        <link href="{{asset('/asset/css/dashboard.css')}}" rel="stylesheet">
         
        
         <!-- Styles -->
@@ -87,56 +87,132 @@
     </div>
   </div>
 
-<h1 class="text mb-4">Trending</h1>
+<h1 class="text mb-2">Trending</h1>
+
+<div class="d-flex justify-content-center mb-3">
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverhujan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Romance</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/covermmj.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coversijuki.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Comedy</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/kgs.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverberanimimpi.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Motivation</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+</div>
+
+<h1 class="text mb-2">Semua bacaan</h1>
 
 <div class="d-flex justify-content-center">
-<div class="card text-center mb-2 mx-4" style="width: 12rem;">
-    <img src="/asset/coverhujan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-    <div class="card-body">
-      <h5 class="card-title">Romance</h5>
-      <a href="#" class="btn btn-primary">Baca</a>
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverberanibahagia.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Motivation</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/covercutnyakdien.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverbintang.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Romance</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverdetikdetik.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverkoalakumal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
     </div>
 </div>
 
-<div class="card text-center mb-2 mx-4" style="width: 12rem;">
-    <img src="/asset/covermmj.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-    <div class="card-body">
-      <h5 class="card-title">Comedy</h5>
-      <a href="#" class="btn btn-primary">Baca</a>
+<div class="d-flex justify-content-center mt-3">
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverhtmlcss.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Fiksi</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
     </div>
-</div>
 
-<div class="card text-center mb-2 mx-4" style="width: 12rem;">
-    <img src="/asset/coversijuki.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-    <div class="card-body">
-      <h5 class="card-title">Comedy</h5>
-      <a href="#" class="btn btn-primary">Baca</a>
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverkihajardewantara.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
     </div>
-</div>
 
-<div class="card text-center mb-2 mx-4" style="width: 12rem;">
-    <img src="/asset/coverbintang.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-    <div class="card-body">
-      <h5 class="card-title">Romance</h5>
-      <a href="#" class="btn btn-primary">Baca</a>
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/covertenggelamnyakapal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
     </div>
-</div>
 
-</div>
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverkambingjantan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
 
-<h1 class="text">Semua bacaan</h1>
-
-<div class="picture d-flex justify-content-center mt-5">
-    <a href="#" class="mx-3">
-        <img src="/asset/covercutnyakdien.png" class="rounded m-auto" alt="...">
-        <p class="text-center">Cut Nyak Dien</p>
-    </a>  
-    <a href="#" class="mx-3">
-        <img src="/asset/coverbahasapemrograman.png" class="rounded m-auto" alt="...">
-        <p class="text-center">Bahasa Pemrograman</p>
-    </a>
-    <a href="#" class="mx-3">
-        <img src="/asset/kgs.png" class="rounded m-auto" alt="...">
-        <p class="text-center">Kamu Gak Sendiri - Syahid Muhammad</p>
-    </a>
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverrajaratu.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
 </div>
