@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,13 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if (Auth::check()) {
+        return redirect()->route('user.dashboard');
+    } elseif (Auth::guard('admin')->check()) {
+        return redirect()->route('admin.dashboard');
+    } else {
+        return view('welcome');
+    }
 })->name('welcome')->middleware('guest');
 
 Route::prefix('user')->group(function(){
@@ -26,7 +33,7 @@ Route::prefix('user')->group(function(){
     Route::get('/logout',[UserController::class, 'Logout'])->name('user.logout')->middleware('auth');
     Route::get('/register',[UserController::class, 'Register'])->name('user.register')->middleware('guest');
     Route::post('/register/proses',[UserController::class, 'RegisterCreate'])->name('user.register.create');
-
+    Route::get('/profil', [UserController::class, 'Profile'])->name('user.profile')->middleware('auth');
 }); 
 
 Route::prefix('admin')->group(function(){

@@ -9,8 +9,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href="{{asset('asset/css/land.css')}}" rel="stylesheet">
 
+        {{-- css --}}
+        <link href="{{asset('asset/css/land.css')}}" rel="stylesheet">
        
         <!-- Styles -->
         <style>
@@ -31,7 +32,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item">
-                            <a class="btn btn-primary mx-1" href="{{ route('formlogin_user') }}">Masuk</a>
+                            <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Masuk
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('formlogin_user') }}">User</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ route('formlogin_admin') }}">Admin</a></li>
+                            </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-primary mx-1" href="{{ route('user.register') }}">Daftar</a>
@@ -46,9 +56,9 @@
             <section id="home">
                 <img src="https://img.freepik.com/free-vector/audio-books-isometric-composition-with-character-female-librarian-with-book-shelves-inside-smartphone-screen-frame-vector-illustration_1284-80591.jpg?size=626&ext=jpg&ga=GA1.1.1371414926.1698114777&semt=ais"/>
                 <div class="kolom">
-                    <p class="deskripsi">Hi,We're Pocketpage</p>
+                    <h1 class="sub-heading mt-5">Hi,We're Pocketpage</h1>
                     
-                    <p class="mt-6">Platform sosial berbasis online untuk membuat cerita secara gratis dan berisi banyak buku dengan berbagai kategori.</p>
+                    <p class="description mt-6">Platform sosial berbasis online untuk membuat cerita secara gratis dan berisi banyak buku dengan berbagai kategori.</p>
             
                     <a href="" class=" btn btn-primary mt-6">Mulai membaca</a>
                     <a href="" class=" btn btn-primary mt-6 ms-2">Mulai menulis</a>

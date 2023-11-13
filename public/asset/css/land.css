@@ -20,27 +20,16 @@ section{
     margin-bottom: 40px;
 }
 
-.kolom .deskripsi {
+.kolom .sub-heading {
     font-size: 50px;
     font-weight: bold;
     font-family: 'comic sans ms';
     color: #364f6b;
 }
 
-h2 {
-    font-family: '';
-    font-weight: 800;
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #364f6b;
-    width: 100%;
-    line-height: 50px;
-}
-
-p {
-    font-family: 'comic sans-ms';
-    font-weight: 300;
-    font-size: 30px;
+.kolom .description {
+    font-size: 17px;
+    font-family: 'comic sans ms';
 }
 
 .card {
