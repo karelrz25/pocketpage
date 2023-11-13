@@ -9,8 +9,10 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
         <link href="{{asset('/asset/css/dashboard.css')}}" rel="stylesheet">
+
         
        
         <!-- Styles -->
@@ -32,15 +34,15 @@
     <body>
 
         
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow mx-6">
             <div class="container-fluid mx-6">
                 <a class="navbar-brand" href="#">
                     <img src="/asset/logo.png" alt="Bootstrap" width="180">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto ">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('user.dashboard') }}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jelajahi</a>
@@ -62,8 +64,22 @@
                                 <li><a class="dropdown-item" href="#">Cerita Saya</a></li>
                             </ul>
                         </li>
-                        <li class="nav-link ">
-                            <a href="{{ route('user.logout') }}">Logout</a>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="btn btn-primary" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-white-600 small">Profile</span>
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            {{-- Dropdown User Information --}}
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu2">
+                                <a class="dropdown-item" href="{{ route('user.profile') }}">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profil 
+                                </a>
+                            </div>
+                            {{-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><button class="dropdown-item">Action</button></li>
+                                <li><button class="dropdown-item">Another action</button></li>
+                                <li><button class="dropdown-item">Something else here</button></li>
+                            </ul> --}}
                         </li>
                 </div>
             </div>

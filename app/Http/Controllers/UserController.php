@@ -49,12 +49,12 @@ class UserController extends Controller
         return redirect()->route('formlogin_user');
     }
 
-
-
-    public function logout(){
+    public function Logout(){
         Auth::logout();
         return redirect()->route("formlogin_user");
     }
-
     
+    public function Profile(){
+        return view('user.profile');
+    }
 }
