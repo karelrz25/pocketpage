@@ -17,7 +17,7 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome')->middleware('guest');
+})->name('welcome');
 
 Route::prefix('user')->group(function(){
     Route::get('/login',[UserController::class, 'Index'])->name('formlogin_user')->middleware('guest');

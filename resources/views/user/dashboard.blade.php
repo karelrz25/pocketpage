@@ -87,7 +87,7 @@
     </div>
   </div>
 
-<h1 class="text mb-2">Trending</h1>
+<h1 class="text text-center mb-3 mt-5">Trending</h1>
 
 <div class="d-flex justify-content-center mb-3">
     <div class="card text-center mb-2 mx-4" style="width: 12rem;">
@@ -131,7 +131,7 @@
     </div>
 </div>
 
-<h1 class="text mb-2">Semua bacaan</h1>
+<h3 class="text text-center mb-3 mt-3">Semua bacaan</h3>
 
 <div class="d-flex justify-content-center">
     <div class="card text-center mb-2 mx-4" style="width: 12rem;">

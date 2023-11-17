@@ -9,8 +9,12 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href="{{asset('asset/css/land.css')}}" rel="stylesheet">
 
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+        {{-- css --}}
+        <link href="{{asset('asset/css/land.css')}}" rel="stylesheet">
        
         <!-- Styles -->
         <style>
@@ -31,7 +35,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item">
-                            <a class="btn btn-primary mx-1" href="{{ route('formlogin_user') }}">Masuk</a>
+                            <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Masuk
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('formlogin_user') }}">User</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ route('formlogin_admin') }}">Admin</a></li>
+                            </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-primary mx-1" href="{{ route('user.register') }}">Daftar</a>
@@ -46,9 +59,9 @@
             <section id="home">
                 <img src="https://img.freepik.com/free-vector/audio-books-isometric-composition-with-character-female-librarian-with-book-shelves-inside-smartphone-screen-frame-vector-illustration_1284-80591.jpg?size=626&ext=jpg&ga=GA1.1.1371414926.1698114777&semt=ais"/>
                 <div class="kolom">
-                    <p class="deskripsi">Hi,We're Pocketpage</p>
+                    <h1 class="sub-heading mt-5">Hi,We're Pocketpage</h1>
                     
-                    <p class="mt-6">Platform sosial berbasis online untuk membuat cerita secara gratis dan berisi banyak buku dengan berbagai kategori.</p>
+                    <p class="description mt-6">Platform sosial berbasis online untuk membuat cerita secara gratis dan berisi banyak buku dengan berbagai kategori.</p>
             
                     <a href="" class=" btn btn-primary mt-6">Mulai membaca</a>
                     <a href="" class=" btn btn-primary mt-6 ms-2">Mulai menulis</a>
@@ -69,7 +82,7 @@
                     <p class="card-text">Pocketpage menyediakan koleksi buku digital yang luas, Mencakup berbagai genre dan topik, Dari fiksi hingga nonfiksi,sastra klasik hingga buku-buku terbaru. Pengguna dapat mengakses dan membaca buku-buku ini secara online atau mengunduhnya dan dibaca dimana saja dan kapan saja.</p>
                 </div>
             </div>
-                <div class="container text-center">
+                <div class="container text-center" style="font-family: cursive">
                     <div class="row ">
                         <div class="col mt-6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="550" height="30" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
@@ -85,14 +98,14 @@
                     </div>
                 </div>
 
-                <div class="picture d-flex justify-content-center mt-5">
+                <div class="picture d-flex justify-content-center mt-5" style="font-family: cursive">
                     <a href=""><img src="asset/img/landingpage/berkebun.png" class="card-img-top mx-4" style="width: 13rem;">Berkebun</a>
                     <a href="#"><img src="asset/img/landingpage/ayah.png" class="card-img-top mx-4" style="width: 13rem;">Ayah</a>
                     <a href="#"><img src="asset/img/landingpage/kabut.png" class="card-img-top mx-4" style="width: 13rem;">Kabut Hutan Semeru</a>
                     <a href="#"><img src="asset/img/landingpage/kisahcinta.png" class="card-img-top mx-4" style="width: 13rem;">Kisah Cinta Kita</a>
                 </div>
                 <div>
-                    <div class="picture d-flex justify-content-center mt-5">
+                    <div class="picture d-flex justify-content-center mt-5 mb-3" style="font-family: cursive">
                     <a href=""><img src="asset/img/landingpage/luarangkasa.png" class="card-img-top mx-4" style="width: 13rem;">Luar Angkasa</a>
                     <a href="#"><img src="asset/img/landingpage/merindumu.png" class="card-img-top mx-4" style="width: 13rem;">Merindu</a>
                     <a href="#"><img src="asset/img/landingpage/perahukertas.png" class="card-img-top mx-4" style="width: 13rem;">Perahu Kertas</a>
@@ -102,5 +115,137 @@
                          
             </div>  
         </div>
-    </body>
+
+        <!-- Footer -->
+        <footer
+          class="text-center text-lg-start text-black "
+          style="background-color:  #f1f1f1">
+          <!-- Section: Social media -->
+          <section
+            class="d-flex justify-content-between p-4 mt-3"
+            style="background-color: rgb(245, 245, 245)">
+            <!-- Left -->
+            <div class="me-5">
+            <span style="font-family: cursive">Get connected with us on social media:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+              <a href="" class="text-black me-4">
+              <i class="bi bi-facebook"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-google"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+            <!-- Right -->
+          </section>
+          <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+              <div class="container text-center text-md-start mt-1">
+                <!-- Grid row -->
+                <div class="row mt-1">
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Pocket Page</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 109px; background-color: #000000; height: 2px"/>
+                        <img src="/asset/logo.png" alt="">
+                    <p style="font-family: cursive">
+                      Pocketpage adalah sebuah aplikasi membaca
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Navigation</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 103px; background-color: #000000; height: 2px"
+                        />
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Buku Sejarah</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Komik</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Horror</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Information</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 118px; background-color: #000000; height: 2px"
+                        />
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Your Account</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Privacy Policy</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Shipping Rates</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Help</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Contact Us</h6>
+                    <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 100px; background-color: rgb(0, 0, 0); height: 2px"/>
+                  <p style="font-family: cursive"><i class="bi bi-house-door-fill mr-3"></i> SMKN 1 GUNUNGPUTRI</p>
+                  <p style="font-family: cursive"><i class="bi bi-envelope mr-3"></i> pocketpage@gmail.com</p>
+                  <p style="font-family: cursive"><i class="bi bi-telephone-fill mr-3"></i> +62 234 567 88</p>
+                  <p style="font-family: cursive"><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+                </div>
+              <!-- Grid row -->
+              </div>
+            </section>
+            <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgb(255, 255, 255), 0.2)">
+      ©Copyright 2023 All Reserved By:
+      <a class="text-black" href="https://wattpad.com"
+        ><strong class="text-info"> Wattpad</strong></a>
+      </div>
+      <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </body>
 </html>
