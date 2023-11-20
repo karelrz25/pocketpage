@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use Auth;
 use Carbon\carbon;
-use Illuminate\Support\Facades\Hash;
+use App\Models\serie;
 
 class AdminController extends Controller
 {
@@ -14,7 +14,8 @@ class AdminController extends Controller
     }
 
     public function Dashboard(){
-        return view('admin.dashboard');
+        $data = serie::all();
+        return view('admin.dashboard', ['data' => $data]);
     }
 
     public function LoginProses(Request $request){
@@ -33,5 +34,9 @@ class AdminController extends Controller
         session()->invalidate();
         session()->regenerateToken();
         return redirect()->route("formlogin_admin");
+    }
+
+    public function Table () {
+        return view('admin.table.index');
     }
 }
