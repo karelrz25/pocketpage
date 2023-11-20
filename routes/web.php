@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-
     if (Auth::check()) {
         return redirect()->route('user.dashboard');
     } elseif (Auth::guard('admin')->check()) {
@@ -26,7 +25,6 @@ Route::get('/', function () {
         return view('welcome');
     }
 })->name('welcome')->middleware('guest');
-
 
 Route::prefix('user')->group(function(){
     Route::get('/login',[UserController::class, 'Index'])->name('formlogin_user')->middleware('guest');
