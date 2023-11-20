@@ -10,7 +10,11 @@ use App\Models\serie;
 class AdminController extends Controller
 {
     public function Login(){
-        return view('logindanregis.loginadmin');
+        if (Auth::guard('admin')->check()) {
+            return redirect()->route('admin.dashboard');
+        } else {
+            return view('logindanregis.loginadmin');
+        }
     }
 
     public function Dashboard(){

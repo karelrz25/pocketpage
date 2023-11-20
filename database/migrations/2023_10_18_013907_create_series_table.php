@@ -16,7 +16,7 @@ return new class extends Migration
             $table->bigInteger('id_buku')->nullable();
             $table->string('chapter');
             $table->string('isi');
-            $table->enum('status', ['I', 'T']);
+            $table->enum('status', ['I', 'T', 'P']);
             $table->timestamps();
         });
 
