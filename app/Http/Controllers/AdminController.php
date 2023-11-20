@@ -14,8 +14,7 @@ class AdminController extends Controller
     }
 
     public function Dashboard(){
-        $data = serie::all();
-        return view('admin.dashboard', ['data' => $data]);
+        return view('admin.dashboard');
     }
 
     public function LoginProses(Request $request){
