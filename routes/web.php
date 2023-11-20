@@ -24,7 +24,7 @@ Route::get('/', function () {
     } else {
         return view('welcome');
     }
-})->name('welcome')->middleware('guest');
+})->name('welcome');
 
 Route::prefix('user')->group(function(){
     Route::get('/login',[UserController::class, 'Index'])->name('formlogin_user')->middleware('guest');
