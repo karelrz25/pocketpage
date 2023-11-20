@@ -24,23 +24,22 @@ Route::get('/', function () {
     } else {
         return view('welcome');
     }
-})->name('welcome')->middleware('guest');
+})->name('welcome');
 
 Route::prefix('user')->group(function(){
     Route::get('/login',[UserController::class, 'Index'])->name('formlogin_user')->middleware('guest');
-    Route::post('/login/proses',[UserController::class, 'Login'])->name('user.login');
+    Route::post('/login/proses',[UserController::class, 'Login'])->name('user.login')->middleware('guest');
     Route::get('/dashboard',[UserController::class, 'Dashboard'])->name('user.dashboard')->middleware('auth');
     Route::get('/logout',[UserController::class, 'Logout'])->name('user.logout')->middleware('auth');
     Route::get('/register',[UserController::class, 'Register'])->name('user.register')->middleware('guest');
-    Route::post('/register/proses',[UserController::class, 'RegisterCreate'])->name('user.register.create');
+    Route::post('/register/proses',[UserController::class, 'RegisterCreate'])->name('user.register.create')->middleware('guest');
     Route::get('/profil', [UserController::class, 'Profile'])->name('user.profile')->middleware('auth');
 }); 
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', [AdminController::class, 'Login'])->name('formlogin_admin')->middleware('guest');
-    Route::post('/login/proses', [AdminController::class, 'LoginProses'])->name('admin.login');
+    Route::post('/login/proses', [AdminController::class, 'LoginProses'])->name('admin.login')->middleware('guest');
     Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
     Route::get('/logout', [AdminController::class, 'Logout'])->name('admin.logout')->middleware('admin');
-    Route::get('/table', [AdminController::class, 'Table'])->name('admin.table')->middleware('admin');
 });
 

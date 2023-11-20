@@ -74,12 +74,10 @@
                                 <a class="dropdown-item" href="{{ route('user.profile') }}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profil 
                                 </a>
+                                <a class="dropdown-item" href="{{ route('user.logout') }}">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Logout 
+                                </a>
                             </div>
-                            {{-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><button class="dropdown-item">Action</button></li>
-                                <li><button class="dropdown-item">Another action</button></li>
-                                <li><button class="dropdown-item">Something else here</button></li>
-                            </ul> --}}
                         </li>
                 </div>
             </div>
