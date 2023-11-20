@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BukuController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -34,7 +35,10 @@ Route::prefix('user')->group(function(){
     Route::get('/register',[UserController::class, 'Register'])->name('user.register')->middleware('guest');
     Route::post('/register/proses',[UserController::class, 'RegisterCreate'])->name('user.register.create')->middleware('guest');
     Route::get('/profil', [UserController::class, 'Profile'])->name('user.profile')->middleware('auth');
-}); 
+
+    // Buku
+    Route::resource('buku', BukuController::class);
+});
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', [AdminController::class, 'Login'])->name('formlogin_admin')->middleware('guest');

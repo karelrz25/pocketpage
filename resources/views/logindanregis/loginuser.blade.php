@@ -10,7 +10,7 @@
     <!-- Custom CSS -->
     <link href="{{asset('asset/css/login.css')}}" rel="stylesheet">
 
-    <title>Hello, Pocketpage</title>
+    <title>Login</title>
   </head>
   <body>
     
