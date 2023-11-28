@@ -60,8 +60,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tulis</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Buat Cerita Baru</a></li>
+                                <li><a class="dropdown-item" href="{{ route('buku.create') }}">Buat Cerita Baru</a></li>
                                 <li><a class="dropdown-item" href="#">Cerita Saya</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Upload Buku</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown no-arrow">
@@ -74,15 +76,11 @@
                                 <a class="dropdown-item" href="{{ route('user.profile') }}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profil 
                                 </a>
+                                <hr class="dropdown-divider">
                                 <a class="dropdown-item" href="{{ route('user.logout') }}">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Logout 
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Logout
                                 </a>
                             </div>
-                            {{-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><button class="dropdown-item">Action</button></li>
-                                <li><button class="dropdown-item">Another action</button></li>
-                                <li><button class="dropdown-item">Something else here</button></li>
-                            </ul> --}}
                         </li>
                 </div>
             </div>

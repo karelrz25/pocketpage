@@ -24,7 +24,7 @@ return new class extends Migration
             $table->enum('status', ['I', 'T']);
             $table->bigInteger('id_kategori');
             $table->string('sinopsis');
-            $table->enum('rekomendasi', ['I', 'T']);
+            $table->enum('rekomendasi', ['I', 'T', 'P']);
             $table->timestamps();
         });
 
