@@ -17,6 +17,7 @@
                             <th>No</th>
                             <th>Judul Buku</th>
                             <th>Penulis</th>
+                            <th>Rekomendasi</th>
                             <th>Kategori</th>
                             <th>Status</th>
                             <th>Aksi</th>
@@ -29,6 +30,13 @@
                                 <td>{{ $k->judul }}</td>
                                 <td>{{ $k->penulis->nama }}</td>
                                 <td>{{ $k->kategori->nama }}</td>
+                                <td>
+                                    @if ($k->rekomendasi == "I")
+                                        Direkomendasi
+                                    @else
+                                        Tidak Direkomendasi
+                                    @endif
+                                </td>
                                 <td>
                                     @if ($k->status == "I")
                                         Diterima
