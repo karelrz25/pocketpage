@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->bigInteger('id_penulis')->nullable();
+            $table->bigInteger('id_penulis');
             $table->string('penerbit')->nullable();
             $table->string('tahun_terbit')->nullable();
             $table->string('tebal')->nullable();
             $table->string('isbn')->nullable();
             $table->string('cover');
             $table->string('pdf')->nullable();
-            $table->enum('status', ['I', 'T']);
+            $table->enum('status', ['I', 'T', 'P']);
             $table->bigInteger('id_kategori');
             $table->string('sinopsis');
-            $table->enum('rekomendasi', ['I', 'T', 'P']);
+            $table->enum('rekomendasi', ['I', 'T']);
             $table->timestamps();
         });
 

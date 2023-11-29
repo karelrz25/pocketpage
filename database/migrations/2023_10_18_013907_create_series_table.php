@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('series', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_buku')->nullable();
+            $table->bigInteger('id_buku');
             $table->string('chapter');
             $table->string('isi');
             $table->enum('status', ['I', 'T', 'P']);
