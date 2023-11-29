@@ -17,8 +17,8 @@
                             <th>No</th>
                             <th>Judul Buku</th>
                             <th>Penulis</th>
-                            <th>Rekomendasi</th>
                             <th>Kategori</th>
+                            <th>Rekomendasi</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
