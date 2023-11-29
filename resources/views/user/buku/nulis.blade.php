@@ -12,6 +12,9 @@
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    {{-- CSS --}}
+    <link rel="stylesheet" href="/asset/css/nulis.css">
+
 </head>
 <body>
 
@@ -24,8 +27,8 @@
         @endif
         <form action="{{ url("user/buku") }}" method="post" enctype="multipart/form-data">
             @csrf
-            <div class="col-lg-8 mx-auto">
-                <h2>Nulis Disiniii</h2>
+            <div class="form-label col-lg-8 mx-auto">
+                <h2>Detail Cerita</h2>
             </div>
             <div class="col-lg-8 mx-auto mb-3">
                 <label for="image" class="form-label">Input Cover Buku</label>
