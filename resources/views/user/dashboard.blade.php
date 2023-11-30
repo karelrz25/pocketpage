@@ -231,136 +231,136 @@
         </div>
         
             <!-- Footer -->
-            <footer
-                class="text-center text-lg-start text-black "
-                style="background-color:  #f1f1f1">
-                <!-- Section: Social media -->
-                <section
-                  class="d-flex justify-content-between p-4 mt-3"
-                  style="background-color: rgb(245, 245, 245)">
-                  <!-- Left -->
-                  <div class="me-5">
-                  <span style="font-family: cursive">Get connected with us on social media:</span>
-                  </div>
-                  <!-- Left -->
-      
-                  <!-- Right -->
-                  <div>
-                    <a href="" class="text-black me-4">
-                    <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="" class="text-black me-4">
-                      <i class="bi bi-twitter"></i>
-                    </a>
-                    <a href="" class="text-black me-4">
-                      <i class="bi bi-google"></i>
-                    </a>
-                    <a href="" class="text-black me-4">
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="" class="text-black me-4">
-                      <i class="bi bi-github"></i>
-                    </a>
-                  </div>
-                  <!-- Right -->
-                </section>
-                <!-- Section: Social media -->
-      
-                  <!-- Section: Links  -->
-                  <section class="">
-                    <div class="container text-center text-md-start mt-1">
-                      <!-- Grid row -->
-                      <div class="row mt-1">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                          <!-- Content -->
-                          <h6 class="text-uppercase fw-bold" style="font-family: cursive">Pocket Page</h6>
-                          <hr
-                              class="mb-4 mt-0 d-inline-block mx-auto"
-                              style="width: 109px; background-color: #000000; height: 2px"/>
-                              <img src="/asset/logo.png" alt="">
-                          <p style="font-family: cursive">
-                            Pocketpage adalah sebuah aplikasi membaca
-                          </p>
-                        </div>
-                        <!-- Grid column -->
-      
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                          <!-- Links -->
-                          <h6 class="text-uppercase fw-bold" style="font-family: cursive">Navigation</h6>
-                          <hr
-                              class="mb-4 mt-0 d-inline-block mx-auto"
-                              style="width: 103px; background-color: #000000; height: 2px"
-                              />
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi</a>
-                          </p>
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Buku Sejarah</a>
-                          </p>
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Komik</a>
-                          </p>
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Horror</a>
-                          </p>
-                        </div>
-                        <!-- Grid column -->
-      
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                          <!-- Links -->
-                          <h6 class="text-uppercase fw-bold" style="font-family: cursive">Information</h6>
-                          <hr
-                              class="mb-4 mt-0 d-inline-block mx-auto"
-                              style="width: 118px; background-color: #000000; height: 2px"
-                              />
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Your Account</a>
-                          </p>
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Privacy Policy</a>
-                          </p>
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Shipping Rates</a>
-                          </p>
-                          <p>
-                            <a href="#!" class="text-black" style="font-family: cursive">Help</a>
-                          </p>
-                        </div>
-                        <!-- Grid column -->
-      
-                        <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                          <!-- Links -->
-                          <h6 class="text-uppercase fw-bold" style="font-family: cursive">Contact Us</h6>
-                          <hr
-                            class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 100px; background-color: rgb(0, 0, 0); height: 2px"/>
-                        <p style="font-family: cursive"><i class="bi bi-house-door-fill mr-3"></i> SMKN 1 GUNUNGPUTRI</p>
-                        <p style="font-family: cursive"><i class="bi bi-envelope mr-3"></i> pocketpage@gmail.com</p>
-                        <p style="font-family: cursive"><i class="bi bi-telephone-fill mr-3"></i> +62 234 567 88</p>
-                        <p style="font-family: cursive"><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-                      </div>
-                      <!-- Grid column -->
-                      </div>
-                    <!-- Grid row -->
-                    </div>
-                  </section>
-                  <!-- Section: Links  -->
-      
-            <!-- Copyright -->
-            <div
-              class="text-center p-3"
-              style="background-color: rgb(255, 255, 255), 0.2)">
-            ©Copyright 2023 All Reserved By:
-            <a class="text-black" href="https://wattpad.com"
-              ><strong class="text-info"> Wattpad</strong></a>
+        <footer
+        class="text-center text-lg-start text-black "
+        style="background-color:  #f1f1f1">
+        <!-- Section: Social media -->
+        <section
+          class="d-flex justify-content-between p-4 mt-3"
+          style="background-color: rgb(245, 245, 245)">
+          <!-- Left -->
+          <div class="me-5">
+          <span style="font-family: cursive">Get connected with us on social media:</span>
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+            <a href="" class="text-black me-4">
+            <i class="bi bi-facebook"></i>
+            </a>
+            <a href="" class="text-black me-4">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://pocketpage.com" class="text-black me-4">
+              <i class="bi bi-google"></i>
+            </a>
+            <a href="https://www.instagram.com/archie.two" class="text-black me-4">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://github.com/karelrz25/pocketpage" class="text-black me-4">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+          <!-- Section: Links  -->
+          <section class="">
+            <div class="container text-center text-md-start mt-1">
+              <!-- Grid row -->
+              <div class="row mt-1">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Pocket Page</h6>
+                  <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 109px; background-color: #000000; height: 2px"/>
+                      <img src="/asset/logo.png" alt="">
+                  <p style="font-family: cursive">
+                    Pocketpage adalah sebuah aplikasi membaca
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Navigation</h6>
+                  <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 103px; background-color: #000000; height: 2px"
+                      />
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi </a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Buku Sejarah</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Komik</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Horror</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Information</h6>
+                  <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 118px; background-color: #000000; height: 2px"
+                      />
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Your Account</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Privacy Policy</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Shipping Rates</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-black" style="font-family: cursive">Help</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Contact Us</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 100px; background-color: rgb(0, 0, 0); height: 2px"/>
+                <p style="font-family: cursive"><i class="bi bi-house-door-fill mr-3"></i> SMKN 1 GUNUNGPUTRI</p>
+                <p style="font-family: cursive"><i class="bi bi-envelope mr-3"></i> pocketpage@gmail.com</p>
+                <p style="font-family: cursive"><i class="bi bi-telephone-fill mr-3"></i> +62 234 567 88</p>
+                <p style="font-family: cursive"><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+              </div>
+            <!-- Grid row -->
             </div>
-            <!-- Copyright -->
-            </footer>
-            <!-- Footer -->
+          </section>
+          <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+      class="text-center p-3"
+      style="background-color: rgb(255, 255, 255), 0.2)">
+    ©Copyright 2023 All Reserved By:
+    <a class="text-black" href="https://wattpad.com"
+      ><strong class="text-info"> Wattpad</strong></a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     </body>
 </html>
