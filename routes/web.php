@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\AdminKategoriController;
+use App\Http\Controllers\AdminBukuController;
+use App\Http\Controllers\AdminSeriesController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -49,5 +52,14 @@ Route::prefix('admin')->group(function(){
     Route::post('/login/proses', [AdminController::class, 'LoginProses'])->name('admin.login')->middleware('guest');
     Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
     Route::get('/logout', [AdminController::class, 'Logout'])->name('admin.logout')->middleware('admin');
+
+    // crud kategori
+    Route::resource('kategori', AdminKategoriController::class);
+
+    // crud buku
+    Route::resource('bukuadmin', AdminBukuController::class);
+
+    // crud series
+    Route::resource('series', AdminSeriesController::class);
 });
 

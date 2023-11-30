@@ -16,6 +16,13 @@ return new class extends Migration
             $table->string('nama');
             $table->timestamps();
         });
+
+         // Insert a new dokter
+         DB::table('kategoris')->insert([
+            'nama' => 'horor',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**

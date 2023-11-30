@@ -12,8 +12,17 @@
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    {{-- CSS --}}
+    <link rel="stylesheet" href="/asset/css/nulis.css">
+
 </head>
 <body>
+    <button href="#" type="button" class="btn btn-primary ms-3 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
+        </svg>
+        Kembali
+      </button>
 
     {{-- Cover Buku --}}
     <div class="col-lg-8 mx-auto">
@@ -24,8 +33,8 @@
         @endif
         <form action="{{ url("user/buku") }}" method="post" enctype="multipart/form-data">
             @csrf
-            <div class="col-lg-8 mx-auto">
-                <h2>Nulis Disiniii</h2>
+            <div class="form-label col-lg-8 mx-auto">
+                <h2>Detail Cerita</h2>
             </div>
             <div class="col-lg-8 mx-auto mb-3">
                 <label for="image" class="form-label">Input Cover Buku</label>
