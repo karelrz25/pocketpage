@@ -111,7 +111,7 @@
         <img src="/asset/coverhujan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
         <div class="card-body">
             <h5 class="card-title">Romance</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
+            <a href="{{ route('buku.index') }}" class="btn btn-primary" >Baca</a>
         </div>
     </div>
 

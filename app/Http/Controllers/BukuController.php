@@ -14,7 +14,12 @@ class BukuController extends Controller
      */
     public function index()
     {
-        // 
+        return view('user.buku.lihat'); 
+    }
+
+    public function CeritaSaya()
+    {
+        return view('user.buku.ceritasaya'); 
     }
 
     /**
