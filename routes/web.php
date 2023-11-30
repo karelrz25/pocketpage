@@ -41,6 +41,10 @@ Route::prefix('user')->group(function(){
 
     // Buku
     Route::resource('buku', BukuController::class);
+    //     Route::get('/buku/lihat', [BukuController::class, 'lihat'])->name('buku.lihat')->middleware('auth');
+
+    // cerita saya
+    Route::get('/ceritasaya', [BukuController::class, 'CeritaSaya']);
 });
 
 Route::prefix('admin')->group(function(){

@@ -363,4 +363,152 @@
     <!-- Footer -->
 
     </body>
+
 </html>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="1000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/asset/thumbnailhujan.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/asset/thumbnailgks.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/asset/thumbnailmmj.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
+      </div>
+    </div>
+  </div>
+
+<h1 class="text mb-2">Trending</h1>
+
+<div class="d-flex justify-content-center mb-3">
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverhujan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Romance</h5>
+            <a href="{{ route('buku.index') }}" class="btn btn-primary" >Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/covermmj.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coversijuki.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Comedy</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/kgs.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverberanimimpi.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Motivation</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+</div>
+
+<h1 class="text mb-2">Semua bacaan</h1>
+
+<div class="d-flex justify-content-center">
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverberanibahagia.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Motivation</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/covercutnyakdien.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverbintang.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Romance</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverdetikdetik.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverkoalakumal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mt-3">
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverhtmlcss.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Fiksi</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverkihajardewantara.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/covertenggelamnyakapal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">History</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverkambingjantan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+
+    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+        <img src="/asset/coverrajaratu.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+        <div class="card-body">
+            <h5 class="card-title">Novel</h5>
+            <a href="#" class="btn btn-primary">Baca</a>
+        </div>
+    </div>
+</div>
+
+</html>
+
