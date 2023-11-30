@@ -136,13 +136,13 @@
               <a href="" class="text-black me-4">
                 <i class="bi bi-twitter"></i>
               </a>
-              <a href="" class="text-black me-4">
+              <a href="https://pocketpage.com" class="text-black me-4">
                 <i class="bi bi-google"></i>
               </a>
-              <a href="" class="text-black me-4">
+              <a href="https://www.instagram.com/archie.two" class="text-black me-4">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a href="" class="text-black me-4">
+              <a href="https://github.com/karelrz25/pocketpage" class="text-black me-4">
                 <i class="bi bi-github"></i>
               </a>
             </div>
@@ -178,7 +178,7 @@
                         style="width: 103px; background-color: #000000; height: 2px"
                         />
                     <p>
-                      <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi</a>
+                      <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi </a>
                     </p>
                     <p>
                       <a href="#!" class="text-black" style="font-family: cursive">Buku Sejarah</a>
