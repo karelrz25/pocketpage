@@ -53,7 +53,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('kategori', AdminKategoriController::class);
 
     // crud buku
-    Route::resource('buku', AdminBukuController::class);
+    Route::resource('bukuadmin', AdminBukuController::class);
 
     // crud series
     Route::resource('series', AdminSeriesController::class);
