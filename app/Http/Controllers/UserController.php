@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\buku;
 use Carbon\carbon;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -18,7 +20,10 @@ class UserController extends Controller
     }
 
     public function Dashboard(){
-        return view('user.dashboard');
+        // Cover 
+        $coverbuku = buku::all()->where('status','I');
+
+        return view('user.dashboard', compact('coverbuku'));
     }
 
     public function Login(Request $request){

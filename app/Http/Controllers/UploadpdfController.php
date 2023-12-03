@@ -5,29 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\buku;
 use App\Models\kategori;
-use Illuminate\Support\Facades\Auth;
 
-class BukuController extends Controller
+class UploadpdfController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // 
+        // return view('uploadpdf.index', compact('pdfFiles'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('user.buku.nulis', [
-            'categories' => kategori::all()
-        ]);
-    }
-
-    public function pdf()
     {
         return view('user.buku.pdf.create', [
             'categories' => kategori::all()
@@ -43,49 +35,42 @@ class BukuController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
             'judul' => 'required|max:255',
             'sinopsis' => 'required',
-            'kategori' => 'required',
-            'file' => 'mimes:pdf|max:10240', 
+            'kategori' => 'required'
         ]);
 
-        // Cover Image
+        // Cover
         $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('asset/img/cover'), $imageName);
+        $request->image->move(public_path('asset/img/cover'),$imageName);
 
-        // PDF
-        if ($request->hasFile('file')) {
-            $file = $request->file('file');
-            $nama_file = $file->getClientOriginalName();
-            $path = $file->storeAs('uploadpdf', $nama_file, 'public');
-        } else {
-            $nama_file = null;
-            $path = null;
-        }
+        // pdf
+        $file = $request->file('file');
+        $nama_file = $file->getClientOriginalName();
+        $path = $file->storeAs('uploadpdf', $nama_file, 'public');
 
         buku::create([
             'cover' => $imageName,
             'pdf' => $nama_file,
             'path' => $path,
-            'judul' => $request->input('judul'),
-            'sinopsis' => $request->input('sinopsis'),
-            'id_kategori' => $request->input('kategori'),
+            'judul'=> request('judul'),
+            'sinopsis'=> request('sinopsis'),
+            'id_kategori' => request('kategori'),
         ]);
 
-        return redirect()->route('buku.create')->with('success', 'Buku Uploaded Successfully.');
+        return redirect()->route('uploadpdf.create')->with('success', 'PDF Berhasil Diupload');
     }
-
 
     /**
      * Display the specified resource.
      */
-    public function show($filename)
+     public function show($filename)
     {
-        $nama_file = public_path('storage/uploadpdf/'.$filename);
+        $filePath = storage_path('app/public/uploadpdf/'.$filename);
 
         // Pastikan file ada sebelum ditampilkan
-        if (file_exists($nama_file)) {
-            return view('user.buku.pdf.index', compact('nama_file'));
+        if (file_exists($filePath)) {
+            return view('user.buku.pdf.index', compact('filePath'));
         } else {
-            return response()->json(['error' => 'File Tidak Diktemukan'], 404);
+            abort(404); // Atau tindakan lain sesuai kebutuhan
         }
     }
 

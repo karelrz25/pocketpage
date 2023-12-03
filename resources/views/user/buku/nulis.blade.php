@@ -33,7 +33,7 @@
                 @error('image')
                     <div class="invalid-feedback">
                         {{ $message }}
-                    </div>
+                    </div> 
                 @enderror   
             </div>
             {{-- Detail Buku --}}
@@ -49,7 +49,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="sinopsis" class="form-label">Sinopsis</label>
-                    <textarea class="form-control @error ('sinopsis') is-invalid @enderror" id="sinopsis" rows="3" name="sinopsis" placeholder="Sinopsis Buku" required>
+                    <textarea class="form-control @error ('sinopsis') is-invalid @enderror" id="sinopsis" rows="3" name="sinopsis" placeholder="Sinopsis Buku" required value="{{ old('sinopsis') }}">
                     @error('sinopsis')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -65,7 +65,13 @@
                         @endforeach
                     </select>
                 </div>
+                {{-- PDF Upload --}}
+                <div class="mx-auto mb-3">
+                    <label for="formFile" class="form-label"> Jika Memiliki Buku yang Sudah Diterbitkan, Silahkan Bisa Langsung Upload E-Book</label>
+                    <input class="form-control" type="file" id="formFile" name="file" accept=".pdf">
+                </div>
                 <button class="btn btn-primary mt-3" type="submit" name="submit">Upload</button>
+                <a class="btn btn-warning mt-3" href="{{ route('user.dashboard') }}">Back to Dashboard</a>
             </div>
         </form> 
     </div>

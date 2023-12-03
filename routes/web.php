@@ -38,6 +38,8 @@ Route::prefix('user')->group(function(){
 
     // Buku
     Route::resource('buku', BukuController::class);
+    Route::get('/pdf/show', [BukuController::class, 'show'])->name('user.buku.show');
+    Route::get('/upload', [BukuController::class, 'pdf'])->name('user.buku.uploadpdf');
 });
 
 Route::prefix('admin')->group(function(){

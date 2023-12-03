@@ -14,7 +14,12 @@ class KategoriTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('kategoris')->insert([
-            'nama' => 'nonfiksi',
+            'nama' => 'Fiksi',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        DB::table('kategoris')->insert([
+            'nama' => 'Nonfiksi',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
