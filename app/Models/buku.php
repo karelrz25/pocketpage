@@ -9,10 +9,15 @@ class buku extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['cover', 'pdf', 'path', 'judul', 'sinopsis', 'id_kategori'];
+    protected $fillable = ['cover', 'pdf', 'path', 'judul', 'sinopsis', 'id_kategori', 'id_penulis'];
 
     public function kategori() 
     {
         return $this->belongsTo(kategori::class, 'id_kategori', 'id');
+    }
+
+    public function penulis()
+    {
+        return $this->belongsTo(user::class, 'id_penulis', 'id');
     }
 }

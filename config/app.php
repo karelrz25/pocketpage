@@ -10,39 +10,6 @@ return [
     | Application Name
     |--------------------------------------------------------------------------
     |
-    | ... (bagian lainnya tetap tidak berubah)
-    |
-    */
-
-    'providers' => array_merge(ServiceProvider::defaultProviders()->merge([
-        /*
-         * Package Service Providers...
-         */
-
-        /*
-         * Application Service Providers...
-         */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-
-        // barryvdh
-        Barryvdh\DomPDF\ServiceProvider::class,
-    ])->toArray()),
-
-    'aliases' => array_merge(Facade::defaultAliases()->merge([
-        'PDF' => Barryvdh\DomPDF\Facade::class
-    ])->toArray(), [
-        // barryvdh
-    ]),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Application Name
-    |--------------------------------------------------------------------------
-    |
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
@@ -201,6 +168,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -216,6 +184,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ])->toArray(),
 
 ];

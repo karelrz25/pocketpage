@@ -7,6 +7,6 @@
     <title>PDF Index</title>
 </head>
 <body> 
-    <iframe src="{{ $filePath }}" width="100%" height="600px"></iframe>
+    <iframe src="{{ asset('storage/uploadpdf/'.$filename) }}" name="pdfFrame" width="100%" height="630px"></iframe>
 </body>
 </html>

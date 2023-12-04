@@ -14,7 +14,19 @@ class BukuController extends Controller
      */
     public function index()
     {
-        // 
+        return view('user.buku.lihat'); 
+    }
+
+    public function CeritaSaya()
+    {
+        $data = buku::all();
+        return view('user.buku.ceritasaya', compact('data')); 
+    }
+
+    public function tampil($filename)
+    {
+        $path = public_path('storage/uploadpdf/'.$filename);
+        return view('user.buku.pdf.index', compact('path','filename'));
     }
 
     /**
@@ -61,6 +73,8 @@ class BukuController extends Controller
             $path = null;
         }
 
+        $user_id = Auth::id();
+
         buku::create([
             'cover' => $imageName,
             'pdf' => $nama_file,
@@ -68,6 +82,7 @@ class BukuController extends Controller
             'judul' => $request->input('judul'),
             'sinopsis' => $request->input('sinopsis'),
             'id_kategori' => $request->input('kategori'),
+            'id_penulis' => $user_id,
         ]);
 
         return redirect()->route('buku.create')->with('success', 'Buku Uploaded Successfully.');
@@ -79,15 +94,46 @@ class BukuController extends Controller
      */
     public function show($filename)
     {
-        $nama_file = public_path('storage/uploadpdf/'.$filename);
+
+         $item = Buku::where('pdf', $filename)->first();
+
+        if (!$item) {
+            abort(404, 'File not found');
+        }
+
+        $path = public_path('storage/uploadpdf/' . $filename);
 
         // Pastikan file ada sebelum ditampilkan
-        if (file_exists($nama_file)) {
-            return view('user.buku.pdf.index', compact('nama_file'));
+        if (file_exists($path)) {
+            return redirect()->route('user.buku.tampil', ['filename' => $filename]);
         } else {
-            return response()->json(['error' => 'File Tidak Diktemukan'], 404);
+            abort(404, 'File not found');
         }
+
+        // $path = public_path('storage/uploadpdf/' . $filename);
+
+        // // Pastikan file ada sebelum ditampilkan
+        // if (file_exists($path)) {
+        //     $file = file_get_contents($path);
+
+        //     return redirect()->route('user.buku.tampil', ['filename'=>$item->pdf]);
+
+        //     // return response($file, 200, [
+        //     //     'Content-Type' => 'aplication/pdf',
+        //     // ]);
+        // } else {
+        //     abort(404, 'File not found');
+        // }
     }
+
+    // Tampil PDF
+    // public function bacapdf($id) 
+    // {
+    //     $pdf = buku::findOrFail($id);
+
+    //     // Tampilkan isi PDF
+    //     return PDF::loadFile(storage_path('app/public/' . $pdf->path))->stream();
+    // }
 
     /**
      * Show the form for editing the specified resource.

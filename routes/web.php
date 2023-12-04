@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\AdminKategoriController;
+use App\Http\Controllers\AdminBukuController;
+use App\Http\Controllers\AdminSeriesController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -36,10 +39,16 @@ Route::prefix('user')->group(function(){
     Route::post('/register/proses',[UserController::class, 'RegisterCreate'])->name('user.register.create')->middleware('guest');
     Route::get('/profil', [UserController::class, 'Profile'])->name('user.profile')->middleware('auth');
 
-    // Buku
+    // PDF
     Route::resource('buku', BukuController::class);
-    Route::get('/pdf/show', [BukuController::class, 'show'])->name('user.buku.show');
+    Route::get('/baca/{filename}', [BukuController::class, 'show'])->name('user.buku.bacapdf');
+    Route::get('/ReadPDF/{filename}', [BukuController::class, 'tampil'])->name('user.buku.tampil');
+    // END PDF
+    // Route::get('baca-pdf', 'BukuController@bacapdf');
     Route::get('/upload', [BukuController::class, 'pdf'])->name('user.buku.uploadpdf');
+     //     Route::get('/buku/lihat', [BukuController::class, 'lihat'])->name('buku.lihat')->middleware('auth');
+    // cerita saya
+    Route::get('/ceritasaya', [BukuController::class, 'CeritaSaya'])->name('user.buku.ceritasaya');
 });
 
 Route::prefix('admin')->group(function(){
@@ -47,5 +56,14 @@ Route::prefix('admin')->group(function(){
     Route::post('/login/proses', [AdminController::class, 'LoginProses'])->name('admin.login')->middleware('guest');
     Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
     Route::get('/logout', [AdminController::class, 'Logout'])->name('admin.logout')->middleware('admin');
+
+    // crud kategori
+    Route::resource('kategori', AdminKategoriController::class);
+
+    // crud buku
+    Route::resource('bukuadmin', AdminBukuController::class);
+
+    // crud series
+    Route::resource('series', AdminSeriesController::class);
 });
 
