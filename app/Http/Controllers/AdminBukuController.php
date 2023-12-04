@@ -13,7 +13,7 @@ class AdminBukuController extends Controller
      */
     public function index()
     {
-        $buku = Buku::all();
+        $buku = buku::all();
         return view('admin.buku.index', compact('buku'));
     }
 

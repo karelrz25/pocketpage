@@ -23,17 +23,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-
-    
-
-        
     </head>
-
-
-
     <body>
-
-        
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow mx-6">
             <div class="container-fluid mx-6">
                 <a class="navbar-brand" href="#">
@@ -61,9 +52,8 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tulis</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('buku.create') }}">Buat Cerita Baru</a></li>
-                                <li><a class="dropdown-item" href="#">Cerita Saya</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Upload Buku</a></li>
+                                <li><a class="dropdown-item" href="{{ route('user.buku.ceritasaya') }}">Cerita Saya</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown no-arrow">
@@ -85,430 +75,168 @@
                 </div>
             </div>
         </nav>
-        
+
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="1000">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/asset/thumbnailhujan.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/asset/thumbnailgks.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/asset/thumbnailmmj.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
-              </div>
+                <div class="carousel-item active">
+                    <img src="/asset/thumbnailhujan.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/asset/thumbnailgks.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/asset/thumbnailmmj.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
+                </div>
             </div>
-          </div>
-        
-        <h1 class="text text-center mb-3 mt-5">Trending</h1>
-        
+        </div>
+
+        <div class="text mx-auto mb-3 mt-5 p-2">
+          PDF Uploaded
+        </div>
         <div class="d-flex justify-content-center mb-3">
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverhujan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Romance</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/covermmj.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Novel</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coversijuki.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Comedy</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/kgs.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Novel</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverberanimimpi.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Motivation</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
+           @foreach ($coverbuku as $item)
+          <div class="card text-center mb-2 mx-4" style="width: 12rem;">
+            <img src="{{ asset('asset/img/cover/'. $item->cover) }}" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+            <div class="card-body">
+              <h5 class="card-title">{{ $item->judul }}</h5>
+              <a href="{{ route('user.buku.bacapdf', ['filename'=>$item->pdf]) }}" target="pdfFrame">
+                <button class="btn btn-success">Baca</button>
+              </a>
+            </div>   
+          </div>
+          @endforeach
         </div>
-        
-        <h3 class="text text-center mb-3 mt-3">Semua bacaan</h3>
-        
-        <div class="d-flex justify-content-center">
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverberanibahagia.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Motivation</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/covercutnyakdien.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">History</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverbintang.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Romance</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverdetikdetik.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">History</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverkoalakumal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Novel</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="d-flex justify-content-center mt-3">
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverhtmlcss.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Fiksi</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverkihajardewantara.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">History</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/covertenggelamnyakapal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">History</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverkambingjantan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Novel</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        
-            <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-                <img src="/asset/coverrajaratu.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Novel</h5>
-                    <a href="#" class="btn btn-primary">Baca</a>
-                </div>
-            </div>
-        </div>
-        
-            <!-- Footer -->
+
+        <!-- Footer -->
         <footer
-        class="text-center text-lg-start text-black "
-        style="background-color:  #f1f1f1">
-        <!-- Section: Social media -->
-        <section
-          class="d-flex justify-content-between p-4 mt-3"
-          style="background-color: rgb(245, 245, 245)">
-          <!-- Left -->
-          <div class="me-5">
-          <span style="font-family: cursive">Get connected with us on social media:</span>
-          </div>
-          <!-- Left -->
-
-          <!-- Right -->
-          <div>
-            <a href="" class="text-black me-4">
-            <i class="bi bi-facebook"></i>
-            </a>
-            <a href="" class="text-black me-4">
-              <i class="bi bi-twitter"></i>
-            </a>
-            <a href="https://pocketpage.com" class="text-black me-4">
-              <i class="bi bi-google"></i>
-            </a>
-            <a href="https://www.instagram.com/archie.two" class="text-black me-4">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://github.com/karelrz25/pocketpage" class="text-black me-4">
-              <i class="bi bi-github"></i>
-            </a>
-          </div>
-          <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-          <!-- Section: Links  -->
-          <section class="">
-            <div class="container text-center text-md-start mt-1">
-              <!-- Grid row -->
-              <div class="row mt-1">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                  <!-- Content -->
-                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Pocket Page</h6>
-                  <hr
-                      class="mb-4 mt-0 d-inline-block mx-auto"
-                      style="width: 109px; background-color: #000000; height: 2px"/>
-                      <img src="/asset/logo.png" alt="">
-                  <p style="font-family: cursive">
-                    Pocketpage adalah sebuah aplikasi membaca
-                  </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                  <!-- Links -->
-                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Navigation</h6>
-                  <hr
-                      class="mb-4 mt-0 d-inline-block mx-auto"
-                      style="width: 103px; background-color: #000000; height: 2px"
-                      />
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi </a>
-                  </p>
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Buku Sejarah</a>
-                  </p>
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Komik</a>
-                  </p>
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Horror</a>
-                  </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                  <!-- Links -->
-                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Information</h6>
-                  <hr
-                      class="mb-4 mt-0 d-inline-block mx-auto"
-                      style="width: 118px; background-color: #000000; height: 2px"
-                      />
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Your Account</a>
-                  </p>
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Privacy Policy</a>
-                  </p>
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Shipping Rates</a>
-                  </p>
-                  <p>
-                    <a href="#!" class="text-black" style="font-family: cursive">Help</a>
-                  </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                  <!-- Links -->
-                  <h6 class="text-uppercase fw-bold" style="font-family: cursive">Contact Us</h6>
-                  <hr
-                    class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 100px; background-color: rgb(0, 0, 0); height: 2px"/>
-                <p style="font-family: cursive"><i class="bi bi-house-door-fill mr-3"></i> SMKN 1 GUNUNGPUTRI</p>
-                <p style="font-family: cursive"><i class="bi bi-envelope mr-3"></i> pocketpage@gmail.com</p>
-                <p style="font-family: cursive"><i class="bi bi-telephone-fill mr-3"></i> +62 234 567 88</p>
-                <p style="font-family: cursive"><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-              </div>
-              <!-- Grid column -->
-              </div>
-            <!-- Grid row -->
+          class="text-center text-lg-start text-black "
+          style="background-color:  #f1f1f1">
+          <!-- Section: Social media -->
+          <section
+            class="d-flex justify-content-between p-4 mt-3"
+            style="background-color: rgb(245, 245, 245)">
+            <!-- Left -->
+            <div class="me-5">
+            <span style="font-family: cursive">Get connected with us on social media:</span>
             </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+              <a href="" class="text-black me-4">
+              <i class="bi bi-facebook"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="https://pocketpage.com" class="text-black me-4">
+                <i class="bi bi-google"></i>
+              </a>
+              <a href="https://www.instagram.com/archie.two" class="text-black me-4">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://github.com/karelrz25/pocketpage" class="text-black me-4">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+            <!-- Right -->
           </section>
-          <!-- Section: Links  -->
+          <!-- Section: Social media -->
 
-    <!-- Copyright -->
-    <div
-      class="text-center p-3"
-      style="background-color: rgb(255, 255, 255), 0.2)">
-    ©Copyright 2023 All Reserved By:
-    <a class="text-black" href="https://wattpad.com"
-      ><strong class="text-info"> Wattpad</strong></a>
-    </div>
-    <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+            <!-- Section: Links  -->
+            <section class="">
+              <div class="container text-center text-md-start mt-1">
+                <!-- Grid row -->
+                <div class="row mt-1">
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Pocket Page</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 109px; background-color: #000000; height: 2px"/>
+                        <img src="/asset/logo.png" alt="">
+                    <p style="font-family: cursive">
+                      Pocketpage adalah sebuah aplikasi membaca
+                    </p>
+                  </div>
+                  <!-- Grid column -->
 
+                  <!-- Grid column -->
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Navigation</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 103px; background-color: #000000; height: 2px"
+                        />
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Novel Fiksi </a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Buku Sejarah</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Komik</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Horror</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Information</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 118px; background-color: #000000; height: 2px"
+                        />
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Your Account</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Privacy Policy</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Shipping Rates</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-black" style="font-family: cursive">Help</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold" style="font-family: cursive">Contact Us</h6>
+                    <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 100px; background-color: rgb(0, 0, 0); height: 2px"/>
+                  <p style="font-family: cursive"><i class="bi bi-house-door-fill mr-3"></i> SMKN 1 GUNUNGPUTRI</p>
+                  <p style="font-family: cursive"><i class="bi bi-envelope mr-3"></i> pocketpage@gmail.com</p>
+                  <p style="font-family: cursive"><i class="bi bi-telephone-fill mr-3"></i> +62 234 567 88</p>
+                  <p style="font-family: cursive"><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+                </div>
+              <!-- Grid row -->
+              </div>
+            </section>
+            <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgb(255, 255, 255), 0.2)">
+      ©Copyright 2023 All Reserved By:
+      <a class="text-black" href="https://wattpad.com"
+        ><strong class="text-info"> Wattpad</strong></a>
+      </div>
+      <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
     </body>
-
 </html>
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="1000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/asset/thumbnailhujan.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="/asset/thumbnailgks.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="/asset/thumbnailmmj.png" class="d-block w-50 rounded m-auto mt-3" alt="...">
-      </div>
-    </div>
-  </div>
-
-<h1 class="text mb-2">Trending</h1>
-
-<div class="d-flex justify-content-center mb-3">
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverhujan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Romance</h5>
-            <a href="{{ route('buku.index') }}" class="btn btn-primary" >Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/covermmj.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Novel</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coversijuki.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Comedy</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/kgs.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Novel</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverberanimimpi.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Motivation</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-</div>
-
-<h1 class="text mb-2">Semua bacaan</h1>
-
-<div class="d-flex justify-content-center">
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverberanibahagia.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Motivation</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/covercutnyakdien.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">History</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverbintang.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Romance</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverdetikdetik.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">History</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverkoalakumal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Novel</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-</div>
-
-<div class="d-flex justify-content-center mt-3">
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverhtmlcss.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Fiksi</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverkihajardewantara.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">History</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/covertenggelamnyakapal.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">History</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverkambingjantan.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Novel</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-
-    <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-        <img src="/asset/coverrajaratu.png" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-        <div class="card-body">
-            <h5 class="card-title">Novel</h5>
-            <a href="#" class="btn btn-primary">Baca</a>
-        </div>
-    </div>
-</div>
-
-</html>
-

@@ -17,12 +17,6 @@
 
 </head>
 <body>
-    <button href="#" type="button" class="btn btn-primary ms-3 mt-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
-        </svg>
-        Kembali
-      </button>
 
     {{-- Cover Buku --}}
     <div class="col-lg-8 mx-auto">
@@ -42,7 +36,7 @@
                 @error('image')
                     <div class="invalid-feedback">
                         {{ $message }}
-                    </div>
+                    </div> 
                 @enderror   
             </div>
             {{-- Detail Buku --}}
@@ -58,7 +52,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="sinopsis" class="form-label">Sinopsis</label>
-                    <textarea class="form-control @error ('sinopsis') is-invalid @enderror" id="sinopsis" rows="3" name="sinopsis" placeholder="Sinopsis Buku" required>
+                    <textarea class="form-control @error ('sinopsis') is-invalid @enderror" id="sinopsis" rows="3" name="sinopsis" placeholder="Sinopsis Buku" required value="{{ old('sinopsis') }}">
                     @error('sinopsis')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -74,7 +68,18 @@
                         @endforeach
                     </select>
                 </div>
+                {{-- PDF Upload --}}
+                <div class="mx-auto mb-3">
+                    <label for="formFile" class="form-label"> Jika Memiliki Buku yang Sudah Diterbitkan, Silahkan Bisa Langsung Upload E-Book</label>
+                    <input class="form-control" type="file" id="formFile" name="file" accept=".pdf">
+                </div>
                 <button class="btn btn-primary mt-3" type="submit" name="submit">Upload</button>
+                <a class="btn btn-warning mt-3" href="{{ route('user.dashboard') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
+                    </svg>
+                    Back to Dashboard
+            </a>
             </div>
         </form> 
     </div>
