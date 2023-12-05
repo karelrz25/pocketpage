@@ -32,7 +32,7 @@ class UploadpdfController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1204',
             'judul' => 'required|max:255',
             'sinopsis' => 'required',
             'kategori' => 'required'

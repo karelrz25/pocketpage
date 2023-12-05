@@ -25,7 +25,7 @@ class BukuController extends Controller
 
     public function tampil($filename)
     {
-        $path = public_path('storage/uploadpdf/'.$filename);
+        $path = public_path('storage/uploadpdf/'.$filename)->where('status', 'I');
         return view('user.buku.pdf.index', compact('path','filename'));
     }
 
@@ -52,7 +52,7 @@ class BukuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'judul' => 'required|max:255',
             'sinopsis' => 'required',
             'kategori' => 'required',
@@ -83,6 +83,7 @@ class BukuController extends Controller
             'sinopsis' => $request->input('sinopsis'),
             'id_kategori' => $request->input('kategori'),
             'id_penulis' => $user_id,
+            'status' => "P",
         ]);
 
         return redirect()->route('buku.create')->with('success', 'Buku Uploaded Successfully.');

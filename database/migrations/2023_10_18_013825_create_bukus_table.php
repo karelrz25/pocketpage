@@ -28,6 +28,8 @@ return new class extends Migration
             $table->enum('rekomendasi', ['I', 'T']);
             $table->timestamps();
         });
+
+        
     }
 
     /**
