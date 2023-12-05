@@ -25,7 +25,7 @@ class BukuController extends Controller
 
     public function tampil($filename)
     {
-        $path = public_path('storage/uploadpdf/'.$filename)->where('status', 'I');
+        $path = public_path('storage/uploadpdf/'.$filename);
         return view('user.buku.pdf.index', compact('path','filename'));
     }
 
