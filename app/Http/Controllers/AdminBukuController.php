@@ -67,7 +67,7 @@ class AdminBukuController extends Controller
         ];
 
         Buku::where('id', $id)->update($buku);
-        return redirect()->route('buku.index');
+        return redirect()->route('bukuadmin.index');
     }
 
     /**
@@ -76,6 +76,6 @@ class AdminBukuController extends Controller
     public function destroy(string $id)
     {
         Buku::where('id', $id)->delete();
-        return redirect()->route('buku.index');
+        return redirect()->route('bukuadmin.index');
     }
 }

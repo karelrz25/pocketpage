@@ -44,9 +44,11 @@ Route::prefix('user')->group(function(){
     Route::get('/baca/{filename}', [BukuController::class, 'show'])->name('user.buku.bacapdf');
     Route::get('/ReadPDF/{filename}', [BukuController::class, 'tampil'])->name('user.buku.tampil');
     // END PDF
+    
     // Route::get('baca-pdf', 'BukuController@bacapdf');
     Route::get('/upload', [BukuController::class, 'pdf'])->name('user.buku.uploadpdf');
      //     Route::get('/buku/lihat', [BukuController::class, 'lihat'])->name('buku.lihat')->middleware('auth');
+     
     // cerita saya
     Route::get('/ceritasaya', [BukuController::class, 'CeritaSaya'])->name('user.buku.ceritasaya');
 });

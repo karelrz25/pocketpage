@@ -78,7 +78,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ url('admin/buku/'.$k->id) }}" method="post">
+                        <form action="{{ url('admin/bukuadmin/'.$k->id) }}" method="post">
                             @csrf
                             @method('PUT')
                             <div class="row">
@@ -163,7 +163,7 @@
                     <div class="modal-body">Ketuk "HAPUS" ketika anda sudah membulatkan pikiran untuk menghapus buku ini</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <form action="{{ url('admin/buku/'.$k->id) }}" method="post">
+                        <form action="{{ url('admin/bukuadmin/'.$k->id) }}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" name="submit" class="btn btn-danger btn-icon">

@@ -96,13 +96,24 @@
         <div class="d-flex justify-content-center mb-3">
            @foreach ($coverbuku as $item)
           <div class="card text-center mb-2 mx-4" style="width: 12rem;">
-            <img src="{{ asset('asset/img/cover/'. $item->cover) }}" class="card-img-top" alt="..." style="width: 200px; height:300px;">
-            <div class="card-body">
-              <h5 class="card-title">{{ $item->judul }}</h5>
-              <a href="{{ route('user.buku.bacapdf', ['filename'=>$item->pdf]) }}" target="pdfFrame">
-                <button class="btn btn-success">Baca</button>
-              </a>
-            </div>   
+            @if ( $item->pdf == "" )
+              <img src="{{ asset('asset/img/cover/'. $item->cover) }}" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+              <div class="card-body">
+                <h5 class="card-title">{{ $item->judul }}</h5>
+                <a href="" target="pdfFrame">
+                  <button class="btn btn-success">Baca</button>
+                </a>
+              </div>  
+            @else
+              <img src="{{ asset('asset/img/cover/'. $item->cover) }}" class="card-img-top" alt="..." style="width: 200px; height:300px;">
+              <div class="card-body">
+                <h5 class="card-title">{{ $item->judul }}</h5>
+                <a href="{{ route('user.buku.bacapdf', ['filename'=>$item->pdf]) }}" target="pdfFrame">
+                  <button class="btn btn-success">Baca</button>
+                </a>
+              </div>  
+            @endif
+             
           </div>
           @endforeach
         </div>
